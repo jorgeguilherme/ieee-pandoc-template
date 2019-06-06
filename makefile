@@ -1,5 +1,6 @@
-FILES = paper.md \
-		metadata.yaml
+FILES = metadata.yaml \
+		parts/*.md \
+		paper.md
 
 OUTPUT = build
 
