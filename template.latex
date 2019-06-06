@@ -5,7 +5,8 @@ $endif$
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $else$
-\usepackage{lmodern}
+%\usepackage{lmodern}
+\usepackage{amsfonts}
 $endif$
 $if(linestretch)$
 \usepackage{setspace}

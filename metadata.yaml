@@ -10,8 +10,9 @@ keywords:
   - two
   - three
 numbersections: yes
-lang: en
-babel-lang: english
+lang: pt-BR
+babel-lang: brazilian
+fontfamily: 
 abstract: |
   This is the abstract.
 
