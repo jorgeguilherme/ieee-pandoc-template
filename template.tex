@@ -16,39 +16,39 @@ $endif$
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
-  \usepackage[utf8]{inputenc}
+	\usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
+	\usepackage[utf8]{inputenc}
 $if(euro)$
-  \usepackage{eurosym}
+	\usepackage{eurosym}
 $endif$
 \else % if luatex or xelatex
-  \ifxetex
-    \usepackage{mathspec}
-  \else
-    \usepackage{fontspec}
-  \fi
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+	\ifxetex
+		\usepackage{mathspec}
+	\else
+		\usepackage{fontspec}
+	\fi
+	\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 $for(fontfamilies)$
-  \newfontfamily{$fontfamilies.name$}[$fontfamilies.options$]{$fontfamilies.font$}
+	\newfontfamily{$fontfamilies.name$}[$fontfamilies.options$]{$fontfamilies.font$}
 $endfor$
 $if(euro)$
-  \newcommand{\euro}{€}
+	\newcommand{\euro}{€}
 $endif$
 $if(mainfont)$
-    \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
+		\setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
 $endif$
 $if(sansfont)$
-    \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
+		\setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
 $endif$
 $if(monofont)$
-    \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
+		\setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
 $endif$
 $if(mathfont)$
-    \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+		\setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
 $endif$
 $if(CJKmainfont)$
-    \usepackage{xeCJK}
-    \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
+		\usepackage{xeCJK}
+		\setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
 $endif$
 \fi
 % use upquote if available, for straight quotes in verbatim environments
@@ -67,35 +67,35 @@ $if(colorlinks)$
 $endif$
 \hypersetup{
 $if(title-meta)$
-            pdftitle={$title-meta$},
+						pdftitle={$title-meta$},
 $endif$
 $if(author-meta)$
-            pdfauthor={$author-meta$},
+						pdfauthor={$author-meta$},
 $endif$
 $if(keywords)$
-            pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
+						pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
 $endif$
 $if(colorlinks)$
-            colorlinks=true,
-            linkcolor=$if(linkcolor)$$linkcolor$$else$Maroon$endif$,
-            citecolor=$if(citecolor)$$citecolor$$else$Blue$endif$,
-            urlcolor=$if(urlcolor)$$urlcolor$$else$Blue$endif$,
+						colorlinks=true,
+						linkcolor=$if(linkcolor)$$linkcolor$$else$Maroon$endif$,
+						citecolor=$if(citecolor)$$citecolor$$else$Blue$endif$,
+						urlcolor=$if(urlcolor)$$urlcolor$$else$Blue$endif$,
 $else$
-            pdfborder={0 0 0},
+						pdfborder={0 0 0},
 $endif$
-            breaklinks=true}
+						breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 $if(lang)$
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
+	\usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
 $if(babel-newcommands)$
-  $babel-newcommands$
+	$babel-newcommands$
 $endif$
 \else
-  \usepackage{polyglossia}
-  \setmainlanguage[$polyglossia-lang.options$]{$polyglossia-lang.name$}
+	\usepackage{polyglossia}
+	\setmainlanguage[$polyglossia-lang.options$]{$polyglossia-lang.name$}
 $for(polyglossia-otherlangs)$
-  \setotherlanguage[$polyglossia-otherlangs.options$]{$polyglossia-otherlangs.name$}
+	\setotherlanguage[$polyglossia-otherlangs.options$]{$polyglossia-otherlangs.name$}
 $endfor$
 \fi
 $endif$
@@ -158,7 +158,7 @@ $else$
 $endif$
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 $if(numbersections)$
 \setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
 $else$
@@ -178,19 +178,19 @@ $else$
 $endif$
 $if(dir)$
 \ifxetex
-  % load bidi as late as possible as it modifies e.g. graphicx
-  $if(latex-dir-rtl)$
-  \usepackage[RTLdocument]{bidi}
-  $else$
-  \usepackage{bidi}
-  $endif$
+	% load bidi as late as possible as it modifies e.g. graphicx
+	$if(latex-dir-rtl)$
+	\usepackage[RTLdocument]{bidi}
+	$else$
+	\usepackage{bidi}
+	$endif$
 \fi
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \TeXXeTstate=1
-  \newcommand{\RL}[1]{\beginR #1\endR}
-  \newcommand{\LR}[1]{\beginL #1\endL}
-  \newenvironment{RTL}{\beginR}{\endR}
-  \newenvironment{LTR}{\beginL}{\endL}
+	\TeXXeTstate=1
+	\newcommand{\RL}[1]{\beginR #1\endR}
+	\newcommand{\LR}[1]{\beginL #1\endL}
+	\newenvironment{RTL}{\beginR}{\endR}
+	\newenvironment{LTR}{\beginL}{\endL}
 \fi
 $endif$
 
@@ -213,18 +213,27 @@ $endif$
 
 $if(author)$
 \author{
-    $for(author)$
-        \IEEEauthorblockN{$author.name$}\\
-        \IEEEauthorblockA{%
-            $author.affiliation$ \\
-            $if(author.location)$
-              $author.location$\\
-            $endif$
-            $author.email$}
-        $sep$ \and
-    $endfor$
+	$for(author)$
+		\IEEEauthorblockN{$author.name$}
+		\IEEEauthorblockN{%
+			$author.affiliation$ \\
+			$if(author.location)$
+				$author.location$\\
+			$endif$
+			$author.email$
+		}
+		\and
+	$endfor$
 }
 $endif$
+
+% $if(author)$
+% \author{
+%   $for(author)$
+%     $author.name$, \and 
+%   $endfor$
+% }
+% $endif$
 
 $if(institute)$
 \providecommand{\institute}[1]{}
@@ -245,7 +254,7 @@ $endif$
 $if(keywords)$
 \begin{IEEEkeywords}
 $for(keywords)$
-    $keywords$$sep$;
+		$keywords$$sep$;
 $endfor$
 \end{IEEEkeywords}
 $endif$

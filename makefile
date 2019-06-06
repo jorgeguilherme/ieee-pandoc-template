@@ -8,7 +8,7 @@ FLAGS = --bibliography=bibliography.bib \
 		-s \
 		-f markdown
 
-FLAGS_PDF = --template=template.latex
+FLAGS_PDF = --template=template.tex
 
 all: pdf
 

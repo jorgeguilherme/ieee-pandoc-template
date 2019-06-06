@@ -5,11 +5,16 @@ author:
     affiliation: Universidade de Brasília
     location: # optional
     email: jorge.guilherme@redes.unb.br
+  - name: Ugo Dias
+    affiliation: Universidade de Brasília
+    location: # optional
+    email: udias@unb.br
 keywords:
   - one
   - two
   - three
 numbersections: yes
+classoption: conference
 lang: pt-BR
 babel-lang: brazilian
 fontfamily: 
