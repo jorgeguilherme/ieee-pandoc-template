@@ -1,10 +1,10 @@
 ---
 title: 'Paper Title'
 author:
-  - name: Santos Gallegos
-    affiliation: Universidad de Cuenca
-    location: Cuenca, Ecuador
-    email: santos_g@email.com
+  - name: Jorge Guilherme Silva dos Santos
+    affiliation: Universidade de Brasília
+    location: # optional
+    email: jorge.guilherme@redes.unb.br
 keywords:
   - one
   - two
